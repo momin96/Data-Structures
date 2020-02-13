@@ -11,11 +11,6 @@ class Node<T> {
     init(_ data: T) {
         self.data = data
     }
-    
-//    func increment() {
-//        weak var weakSelf = self
-//        weakSelf = weakSelf?.next
-//    }
 }
 
 enum ListDirection {
@@ -59,7 +54,6 @@ struct SinglyLinkedList<T: Equatable> {
                 // Traverse till it reaches nil
                 while tempNode?.next != nil {
                     tempNode = tempNode?.next
-//                    tempNode?.increment()
                 }
                 
                 // Then insert new node from right side.
@@ -119,11 +113,12 @@ struct SinglyLinkedList<T: Equatable> {
         
         // Traverse till it reaches nil node
         while tempNode != nil {
+            
             // If not nil then increment counter
             noOfNodes += 1
+            
             // Increment node by pointing to next node
             tempNode = tempNode?.next
-//            tempNode?.increment()
         }
         
         return noOfNodes
@@ -145,7 +140,6 @@ struct SinglyLinkedList<T: Equatable> {
             
             // Increment node by pointing to next node
             tempNode = tempNode?.next
-//            tempNode?.increment()
         }
         
         return false
@@ -169,7 +163,6 @@ struct SinglyLinkedList<T: Equatable> {
             
             // Incrementing by pointing to next node
             tempNode = tempNode?.next
-//            tempNode?.increment()
         }
         
         print(visibleNodeSequence)
